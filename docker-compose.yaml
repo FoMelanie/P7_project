@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  fastapi_backend:
+    build: 6_fastapi_backend
+    ports:
+      - 8080:8080
+    volumes:
+      - /6_fastapi_backend/main.py
+  
+  dashboard:
+    build: 7_dashboard
+    ports:
+      - 8501:8501
+    depends_on:
+      - fastapi_backend
+    volumes:
+        - /7_dashboard/app.py
+
