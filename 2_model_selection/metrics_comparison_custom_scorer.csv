@@ -1,0 +1,29 @@
+,cv_model_mean_train_accuracy,cv_model_mean_train_precision,cv_model_mean_train_recall,cv_model_mean_train_f1_score,cv_model_mean_val_accuracy,cv_model_mean_val_precision,cv_model_mean_val_recall,cv_model_mean_val_f1_score,model,best_param,cv_score,test_score,mean_train_accuracy,mean_train_precision,mean_train_recall,mean_train_f1_score,mean_val_accuracy,mean_val_precision,mean_val_recall,mean_val_f1_score,classifier
+0,50.17506756170601,0.08567409556464022,0.5114646209102823,0.1467641188618676,49.712800682388746,0.08519667047494696,0.5136958129127666,0.14615368666870784,,,,,,,,,,,,,
+1,,,,,,,,,logreg,{'classifier__C': 0.001},-1.8210207793113329,-1.7868756408378497,68.48952909641451,0.16157815064685035,0.6591109976387767,0.25953280275612767,68.4136769014101,0.16080427824637547,0.6565518727563183,0.258330467403971,"LogisticRegression(max_iter=1000, random_state=11)"
+2,,,,,,,,,knn,"{'classifier__weights': 'distance', 'classifier__p': 2, 'classifier__n_neighbors': 30, 'classifier__metric': 'minkowski', 'classifier__leaf_size': 10}",-3.133583439025328,-3.3690557451649603,100.0,1.0,1.0,1.0,80.44302331637478,0.17561568168149924,0.36132338177491824,0.2363318632818622,KNeighborsClassifier()
+3,,,,,,,,,xgb,"{'classifier__subsample': 0.5, 'classifier__min_child_weight': 5.0, 'classifier__max_depth': 8, 'classifier__learning_rate': 0.5, 'classifier__colsample_bytree': 1.0}",-7.297550565516777,-7.5395842547545335,93.82070012998275,0.806555894733696,0.3452516412593673,0.48350046442785716,89.86148690857944,0.23482531286269426,0.0928301873401518,0.1330258894261922,"XGBClassifier(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, gpu_id=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              n_estimators=100, n_jobs=None, num_parallel_tree=None,
+              predictor=None, random_state=None, ...)"
+4,,,,,,,,,xgb_weight,"{'classifier__subsample': 0.7, 'classifier__scale_pos_weight': 10.935706084959817, 'classifier__min_child_weight': 5.0, 'classifier__max_depth': 3, 'classifier__learning_rate': 0.1, 'classifier__colsample_bytree': 1.0}",-1.886818476855763,-1.8240311237468203,70.16379847158903,0.17338560170079242,0.6797769442124203,0.2762953273130572,69.69026400578855,0.16673551360035752,0.6547467656144751,0.2657799086353847,"XGBClassifier(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, gpu_id=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              n_estimators=100, n_jobs=None, num_parallel_tree=None,
+              predictor=None, random_state=None, ...)"
+5,,,,,,,,,lgbm_smote,"{'classifier__sub_feature': 0.25, 'classifier__objective': 'binary', 'classifier__num_leaves': 20, 'classifier__min_data': 10, 'classifier__max_depth': 200, 'classifier__learning_rate': 0.5, 'classifier__boosting_type': 'goss'}",-8.345541069703058,-6.538862030494608,89.44896386844424,0.24599114355826499,0.12520907363700184,0.1658378060970128,88.54229186276842,0.15269909855943534,0.08020347014145356,0.10496537581799815,LGBMClassifier()
+6,,,,,,,,,lgbm_unbalance,"{'classifier__sub_feature': 0.75, 'classifier__objective': 'binary', 'classifier__num_leaves': 50, 'classifier__min_data': 100, 'classifier__max_depth': 150, 'classifier__learning_rate': 0.1, 'classifier__is_unbalance': True, 'classifier__boosting_type': 'goss'}",-2.3214745818315077,-2.12902133423637,75.81707124965747,0.22715623198902093,0.7851729927923544,0.3523636764988572,72.80822562104112,0.17198372816469767,0.5886494553225096,0.2661868140372076,LGBMClassifier()
+7,,,,,,,,,lgbm_weight,"{'classifier__sub_feature': 0.5, 'classifier__scale_pos_weight': 10.935706084959817, 'classifier__objective': 'binary', 'classifier__num_leaves': 50, 'classifier__min_data': 20, 'classifier__max_depth': 5, 'classifier__learning_rate': 0.1, 'classifier__boosting_type': 'goss'}",-2.0713494808553405,-1.9485560991005209,72.36492003439186,0.19199905246176688,0.7163523104189816,0.30282959152654515,70.97509660605397,0.16860786398587893,0.6268668850022067,0.2657381500485279,LGBMClassifier()
